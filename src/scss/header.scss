@@ -1,0 +1,37 @@
+.header {
+  padding-block: toRem(27);
+
+  @media (max-width:$mobile) {
+    padding-block: toRem(15);
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+  &__logo {
+    inline-size: toRem(58);
+    flex-basis: toRem(58);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+
+    img {
+      inline-size: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width:$mobile) {
+      inline-size: toRem(40);
+      flex-basis: toRem(40);
+    }
+  }
+
+  // .header__menu
+  &__menu {}
+}

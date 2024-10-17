@@ -1,7 +1,8 @@
 .menu {
+
 	// .menu__icon
-	&__icon {
-	}
+	&__icon {}
+
 	// .menu__body
 	&__body {
 		@media (max-width: $mobile) {
@@ -11,37 +12,87 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
-			padding: toRem(50) toRem(15) toRem(15) toRem(30);
+			padding: calc(var(--header-height) + toRem(10)) toRem(25) toRem(15) toRem(30);
 			transition: left 0.3s;
+			background: $blueGrad;
+
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(70);
+				height: var(--header-height);
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;
 				z-index: 2;
+				background-color: $darkBlue;
 			}
+
 			.menu-open & {
 				left: 0;
+
 				&::before {
 					left: 0;
 				}
 			}
 		}
 	}
+
 	// .menu__list
 	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		column-gap: toRem(20);
+		row-gap: toRem(20);
+
 		@media (max-width: $mobile) {
+			align-items: end;
+			flex-direction: column;
+			row-gap: toRem(25);
 		}
 	}
+
 	// .menu__item
 	&__item {
+		overflow: hidden;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+
+				.menu__link {
+					&::after {
+						inline-size: 100%;
+						inset-inline-start: 0%;
+					}
+				}
+			}
+		}
 	}
+
 	// .menu__link
 	&__link {
+		color: $whiteColor;
+		font-weight: 500;
+		line-height: 1.3;
+		text-decoration: none;
+		transition: color 0.4s;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inline-size: 0;
+			block-size: toRem(1);
+			background: $whiteColor;
+			inset-block-end: 0;
+			inset-inline-start: 0;
+			transition: inline-size 0.3s ease-out;
+		}
+
 		@media (max-width: $mobile) {
+			font-size: toRem(24);
 		}
 	}
 }
@@ -49,15 +100,18 @@
 //Burger Icon
 .icon-menu {
 	display: none;
+
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: toRem(30);
-		height: toRem(18);
+		width: toRem(40);
+		height: toRem(28);
 		z-index: 5;
+
 		@media (any-hover: none) {
 			cursor: default;
 		}
+
 		span,
 		&::before,
 		&::after {
@@ -66,31 +120,38 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(2);
-			background-color: #000;
+			height: toRem(5);
+			border-radius: toRem(10);
+			background-color: $whiteColor;
 		}
+
 		&::before {
 			top: 0;
 		}
+
 		&::after {
 			bottom: 0;
 		}
+
 		span {
-			top: calc(50% - toRem(1));
+			top: calc(50% - toRem(2.5));
 		}
+
 		.menu-open & {
 			span {
 				width: 0;
 			}
+
 			&::before,
-			&::after {
-			}
+			&::after {}
+
 			&::before {
-				top: calc(50% - toRem(1));
+				top: calc(50% - toRem(2.5));
 				transform: rotate(-45deg);
 			}
+
 			&::after {
-				bottom: calc(50% - toRem(1));
+				bottom: calc(50% - toRem(2.5));
 				transform: rotate(45deg);
 			}
 		}
