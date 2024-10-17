@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"CommonPage"
+})
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+
+      <a class="button-link _icon-arrow" href="#">To excursions</a>
+      <!-- <button class="button _icon-arrow" type="button">К экскурсиям</button> -->
+
+      <div class="item-hero">
+        <div class="item-hero__wrapper">
+          <a href="#" class="item-hero__link">
+            <img class="item-hero__image" src="@img/hero/image-swiper.jpeg" alt="Image">
+          </a>
+          <button class="item-hero__button-play _icon-play"></button>
+        </div>
+      </div>
+
+      <article class="item-popular">
+        <div class="item-popular__wrapper">
+          <div class="item-popular__picture">
+            <img class="item-popular__image" src="@img/popular/image_01.jpeg" alt="Image 01">
+          </div>
+          <div class="item-popular__body">
+            <div class="item-popular__top">
+              <div class="item-popular__subtitle">Bus tour</div>
+              <h3 class="item-popular__title-name">Los Angeles Sightseeing Tour</h3>
+              <div class="item-popular__info info-popular">
+                <div class="info-popular__item _icon-time">6 hours</div>
+                <div class="info-popular__item _icon-coins">950 $</div>
+              </div>
+            </div>
+            <div class="item-popular__text">
+              <p>
+                We invite you to the excursion <br>"Sightseeing tour of Los Angeles":</br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, magnam. Fuga, aut nemo tempore ratione architecto numquam consequatur, sed cupiditate iste, id molestias. Perspiciatis obcaecati possimus, ut quibusdam voluptatem officis...
+              </p>
+            </div>
+            <button class="item-popular__button button" type="button">Read more</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item-type">
+        <div class="item-type__icon">
+          <img class="item-type__image" src="@img/types/icon_01.png" alt="Icon bus">
+        </div>
+        <div class="item-type__content">
+          <h4 class="item-type__title">Автобусный тур</h4>
+          <div class="item-type__text">
+            <p>
+              Один из самых насыщенных впечатлениями, доступных по цене и популярных видов отдыха. Во время одной поездки можно посмотреть достопримечательности сразу нескольких городов, причем обойдется это едва ли не в разы дешевле классического экскурсионного тура с ночевками в отелях.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
