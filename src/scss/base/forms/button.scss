@@ -27,8 +27,7 @@
 	}
 
 	&--rm {
-		padding-block-start: toRem(13);
-		padding-block-end: toRem(13);
+		padding: toRem(13) toRem(0);
 	}
 
 	&--fw {
