@@ -15,6 +15,7 @@
 			padding: calc(var(--header-height) + toRem(10)) toRem(25) toRem(15) toRem(30);
 			transition: left 0.3s;
 			background: $blueGrad;
+			z-index: 4;
 
 			&::before {
 				content: "";
@@ -49,7 +50,6 @@
 		@media (max-width: $mobile) {
 			align-items: end;
 			flex-direction: column;
-			row-gap: toRem(25);
 		}
 	}
 
@@ -59,12 +59,13 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $redColor;
-
 				.menu__link {
+					color: $redColor;
+
 					&::after {
 						inline-size: 100%;
 						inset-inline-start: 0%;
+						background-color: $redColor;
 					}
 				}
 			}
