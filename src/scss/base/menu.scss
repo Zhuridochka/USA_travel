@@ -60,12 +60,12 @@
 		@media (any-hover: hover) {
 			&:hover {
 				.menu__link {
-					color: $redColor;
+					color: $yellowColor;
 
 					&::after {
 						inline-size: 100%;
 						inset-inline-start: 0%;
-						background-color: $redColor;
+						background-color: $yellowColor;
 					}
 				}
 			}

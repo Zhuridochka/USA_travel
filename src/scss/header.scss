@@ -1,5 +1,8 @@
 .header {
+  position: fixed;
+  inline-size: 100%;
   padding-block: toRem(27);
+  z-index: 60;
 
   @media (max-width:$mobile) {
     padding-block: toRem(15);

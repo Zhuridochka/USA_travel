@@ -238,6 +238,16 @@
         }
       }
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .social-footer__link {
+          &::before {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
   }
 
   // .social-footer__link
@@ -252,6 +262,7 @@
 
     &::before {
       font-size: toRem(34);
+      transition: transform 0.4s;
     }
   }
 }
