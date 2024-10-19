@@ -242,8 +242,9 @@ function windowLoaded() {
   //   });
   // }
   // marquee();
+
   //* Функція для визначення висоти у header і встановлення висоти для &:before .menu__body
-  /*function updateHeightMenuBodyBefore() {
+  function updateHeightMenuBodyBefore() {
     const header = document.querySelector(".header");
     if (!header) return;
     const headerHeight = header.offsetHeight;
@@ -252,8 +253,8 @@ function windowLoaded() {
       `${headerHeight}px`
     );
   }
-    */
-  //updateHeightMenuBodyBefore();
+
+  updateHeightMenuBodyBefore();
 
   function updateHeightSwiperVideoSlider() {
     const swiperVideo = document.querySelector(".swiper-video__slider");
