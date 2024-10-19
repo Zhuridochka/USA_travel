@@ -11,6 +11,11 @@
   &__popular {
     margin-block-end: toRem(150);
   }
+
+  // .page__about  
+  &__about {
+    margin-block-end: toRem(150);
+  }
 }
 
 //====================================================================================================
@@ -352,36 +357,194 @@
 }
 
 //========================================================================================================================================================
-.page {
-
-  // .page__about
-
-  &__about {}
-}
-
 .about {
+  @include gridContainer(4);
 
   // .about__content
-
-  &__content {}
+  &__content {
+    display: flex;
+    position: relative;
+  }
 
   // .about__picture
+  &__picture {
+    position: relative;
+    inline-size: toRem(1071);
+    flex-basis: toRem(1071);
+    aspect-ratio: 1071 / 749;
+    border-radius: 0 toRem(10) toRem(10) 0;
 
-  &__picture {}
+    &::before {
+      position: absolute;
+      content: '';
+      inline-size: 100%;
+      block-size: 100%;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+    }
+  }
 
   // .about__image
-
-  &__image {}
+  &__image {
+    inline-size: 100%;
+    object-fit: cover;
+    border-radius: 0 toRem(10) toRem(10) 0;
+    // grid-template-columns: ;
+  }
 
   // .about__body
-
-  &__body {}
+  &__body {
+    position: absolute;
+    inset-block-start: toRem(137);
+    inset-inline-start: toRem(738);
+    background-color: $grayColor;
+    padding-block-start: toRem(61);
+    padding-inline-end: toRem(75);
+    padding-block-end: toRem(105);
+    padding-inline-start: toRem(85);
+    border-radius: toRem(10);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(40);
+  }
 
   // .about__title
-
   &__title {}
 
   // .about__text
+  &__text {
+    font-weight: 500;
+    line-height: 1.2;
 
-  &__text {}
+    p {
+      &:not(:last-child) {
+        margin-block-end: toRem(20);
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+.page {
+
+  // .page__gallery
+
+  &__gallery {}
+}
+
+.gallery {
+  padding-block: toRem(50);
+  @include gridContainer(2);
+
+  // .gallery__body
+  &__body {
+    margin: 0 auto;
+  }
+}
+
+.pictures-gallery {
+  display: grid;
+  grid-template-columns: 0.160368fr 0.197663fr 0.268148fr 0.197663fr 0.160368fr;
+  grid-template-rows: repeat(4, 0.2522fr);
+  gap: toRem(20);
+  align-items: stretch;
+  justify-items: stretch;
+
+  // .pictures-gallery__image
+  &__image {
+    display: inline-block;
+    border-radius: toRem(10);
+
+    &:first-child {
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+      inline-size: toRem(503);
+      aspect-ratio: 503 / 280;
+
+      img {
+        aspect-ratio: 503 / 280;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-row: 1/ span 4;
+      inline-size: toRem(362);
+      aspect-ratio: 362 / 567;
+
+      img {
+        aspect-ratio: 362 / 567;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-row: 1 / span 2;
+      inline-size: toRem(266);
+      aspect-ratio: 266 / 263;
+
+      img {
+        aspect-ratio: 266 / 263;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-row: 1 / span 2;
+      inline-size: toRem(216);
+      aspect-ratio: 216 / 263;
+
+      img {
+        aspect-ratio: 216 / 263;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-row: 3 / span 2;
+      inline-size: toRem(216);
+      aspect-ratio: 216 / 263;
+
+      img {
+        aspect-ratio: 216 / 263;
+      }
+    }
+
+    &:nth-child(6) {
+      grid-column: 2 / span 1;
+      grid-row: 3 / 4;
+      inline-size: toRem(266);
+      aspect-ratio: 266 / 123;
+
+      img {
+        aspect-ratio: 266 / 123;
+      }
+    }
+
+    &:nth-child(7) {
+      grid-column: 2 / span 1;
+      grid-row: 4 / span 1;
+      inline-size: toRem(266);
+      aspect-ratio: 266 / 123;
+
+      img {
+        aspect-ratio: 266 / 123;
+      }
+    }
+
+    &:nth-child(8) {
+      grid-column: 4 / span 2;
+      grid-row: 3 / span 2;
+      inline-size: toRem(503);
+      aspect-ratio: 503 / 280;
+
+      img {
+        aspect-ratio: 503 / 280;
+      }
+    }
+  }
+
+  // .pictures-gallery__img  
+  &__img {
+    border-radius: toRem(10);
+    inline-size: 100%;
+    object-fit: cover;
+  }
 }
