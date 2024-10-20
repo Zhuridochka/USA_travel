@@ -31,6 +31,9 @@
   &__reviews {
     margin-block-end: toRem(150);
   }
+
+  // .page__feedback    
+  &__feedback {}
 }
 
 //====================================================================================================
@@ -977,5 +980,86 @@
     &::before {
       color: $grayColor;
     }
+  }
+}
+
+//========================================================================================================================================================
+.feedback {
+  min-block-size: 100vh;
+  position: relative;
+
+  // .feedback__bg-image
+
+  &__bg-image {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+  }
+
+  // .feedback__image
+  &__image {
+    aspect-ratio: 1440 / 640;
+  }
+
+  // .feedback__container
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+  }
+
+  // .feedback__box
+  &__box {
+    position: relative;
+    z-index: 1;
+    padding: toRem(132) toRem(95) toRem(143) toRem(105);
+    flex-basis: 50%;
+    background: rgba(0, 0, 0, 0.30);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inline-size: 100%;
+      block-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      background: inherit;
+      backdrop-filter: blur(1px);
+      filter: blur(5px);
+      z-index: -1;
+    }
+  }
+
+  // .feedback__body
+  &__body {}
+
+  // .feedback__header
+  &__header {}
+
+  // .feedback__form
+  &__form {}
+}
+
+.header-feedback {
+  &:not(:last-child) {
+    margin-block-end: toRem(45);
+  }
+
+  // .header-feedback__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(6);
+    }
+  }
+
+  // .header-feedback__text
+  &__text {
+    color: $yellowColor;
+    font-weight: 500;
+    line-height: 1.214286;
+    /* 17/14 */
   }
 }

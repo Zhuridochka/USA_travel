@@ -836,5 +836,9 @@
   font-weight: 700;
   color: $blueColor;
   line-height: 1.208333;
+
   /* 29/24 */
+  &--white {
+    color: $whiteColor;
+  }
 }

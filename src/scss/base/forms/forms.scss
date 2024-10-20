@@ -1,15 +1,51 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
+
+	// .form--fdb
+	&--fdb {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__row {}
 
 	&__column {}
 
-	&__line {}
+	&__line {
 
-	&__input {}
+		&--fdb {
+			margin-block-end: toRem(45);
 
-	&__button {}
+			&:last-child {
+				margin-block-end: toRem(80);
+			}
+		}
+	}
+
+	&__input {
+
+		// .form__input--fdb
+		&--fdb {
+			color: $whiteColor;
+			border-block-end: toRem(1) solid $whiteColor;
+
+			&::placeholder {
+				color: $whiteColor;
+				font-size: toRem(12);
+				font-weight: 500;
+				line-height: 1.25;
+				/* 15/12 */
+			}
+		}
+	}
+
+	&__button {
+		&--fdb {
+			margin-block-start: toRem(35);
+			max-inline-size: toRem(230)
+		}
+	}
 
 	&__error {}
 }
@@ -22,7 +58,7 @@
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+//@import "input";
 
 // <CHECK>
 // Сніппет (HTML): chk
