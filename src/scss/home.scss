@@ -26,6 +26,11 @@
   &__gallery {
     margin-block-end: toRem(150);
   }
+
+  // .page__reviews  
+  &__reviews {
+    margin-block-end: toRem(150);
+  }
 }
 
 //====================================================================================================
@@ -846,3 +851,131 @@
 }
 
 //========================================================================================================================================================
+.reviews {
+  padding-block-start: toRem(34);
+  @include gridContainer(3);
+
+  // .reviews__content
+  &__content {}
+
+  // .reviews__container
+  &__container {
+    margin-inline-start: toRem(-15);
+    @include adaptiveValue("margin-block-end", 90, 40);
+  }
+
+  // .reviews__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(40);
+  }
+
+  // .reviews__title
+  &__title {}
+
+  // .reviews__all
+  &__all {
+    font-size: toRem(12);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.4s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $redColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // .reviews__body
+  &__body {}
+
+  // .reviews__slider
+  &__slider {}
+
+  // .reviews__wrapper
+  &__wrapper {
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .reviews__slide
+  &__slide {
+    max-inline-size: toRem(740);
+
+    @media (max-width:$mobile) {
+      max-inline-size: toRem(505);
+    }
+  }
+
+  // .reviews__control
+  &__control {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(50);
+  }
+
+  // .reviews__navigation
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev,
+  &__next {
+    inline-size: toRem(43);
+    block-size: toRem(43);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      color: $blueColor;
+      font-size: toRem(43);
+    }
+  }
+
+  // .reviews__prev
+  &__prev {
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .reviews__next
+  &__next {
+    &::before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  // .reviews__scrollbar  
+  &__scrollbar {
+    inline-size: 100%;
+    block-size: toRem(2);
+    background-color: $grayColor;
+
+    .swiper-scrollbar-drag {
+      inline-size: percent(170, 774);
+      block-size: 100%;
+      background-color: $blueColor;
+
+      &:not(:first-child) {
+        margin: 0 toRem(6);
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    cursor: none;
+
+    &::before {
+      color: $grayColor;
+    }
+  }
+}

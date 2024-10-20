@@ -708,20 +708,29 @@
   &__box {
     inline-size: toRem(245);
     block-size: 100%;
-    // flex-basis: toRem(245);
-    flex-grow: 1;
+    flex-basis: toRem(245);
     display: flex;
   }
-
 
   // .item-review__picture
   &__picture {
     inline-size: toRem(245);
     flex-basis: toRem(245);
     flex-grow: 1;
+
     aspect-ratio: 1;
     border-radius: toRem(10);
     overflow: hidden;
+
+    @media (max-width: toEm(1024)) {
+      inline-size: toRem(200);
+      flex-basis: toRem(200);
+    }
+
+    @media (max-width:$tablet) {
+      inline-size: toRem(180);
+      flex-basis: toRem(180);
+    }
 
     @media (max-width: toEm(620)) {
       inline-size: toRem(168);
@@ -739,6 +748,7 @@
 
   // .item-review__content
   &__content {
+    padding-block-end: toRem(10);
     inline-size: toRem(395);
     flex-basis: toRem(395);
     flex-grow: 1;
@@ -747,6 +757,10 @@
     row-gap: toRem(30);
     position: relative;
     z-index: 2;
+
+    @media (max-width:$tablet) {
+      row-gap: toRem(15);
+    }
 
     @media (max-width:$mobile) {
       row-gap: toRem(20);
@@ -796,8 +810,8 @@
     position: absolute;
     inline-size: percent(149, 740);
     block-size: percent(121, 322);
-    inset-block-start: percent(244, 322);
-    inset-inline-start: percent(480, 740);
+    inset-block-start: percent(205, 322);
+    inset-inline-start: percent(550, 740);
     transform: rotate(16deg);
     aspect-ratio: 197 / 322;
 
