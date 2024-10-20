@@ -17,6 +17,11 @@
     margin-block-end: toRem(150);
   }
 
+  // .page__types    
+  &__types {
+    margin-block-end: toRem(150);
+  }
+
   // .page__gallery  
   &__gallery {
     margin-block-end: toRem(150);
@@ -491,6 +496,73 @@
 }
 
 //========================================================================================================================================================
+.types {
+
+  // .types__container
+  &__container {}
+
+  // .types__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width:$mobile) {
+      @include adaptiveValue("padding-inline", 59, 0, 0, 767, 428);
+    }
+  }
+
+  // .types__title
+  &__title {
+    @include adaptiveValue("margin-block-end", 90, 40);
+  }
+
+  // .types__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    column-gap: toRem(20);
+    row-gap: toRem(40);
+
+    @media (max-width: toEm(880)) {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    &:not(:last-child) {
+      margin-block-end: toRem(60);
+    }
+  }
+
+  // .types__item
+  &__item {}
+
+  // .types__text
+  &__text {
+    max-inline-size: toRem(550);
+    align-self: center;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
+    }
+
+    @media (max-width:$mobileSmall) {
+      &:not(:last-child) {
+        margin-block-end: toRem(40);
+      }
+    }
+  }
+
+  // .types__button
+  &__button {
+    align-self: center;
+    max-inline-size: toRem(250)
+  }
+}
+
+//========================================================================================================================================================
 .gallery {
 
   // .gallery__container
@@ -772,3 +844,5 @@
     /* 194/186 */
   }
 }
+
+//========================================================================================================================================================
