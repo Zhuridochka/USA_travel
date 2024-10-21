@@ -256,6 +256,7 @@ function windowLoaded() {
 
   updateHeightMenuBodyBefore();
 
+  //* Функція для визначення динамічної висоти половини слайдеру
   function updateHeightSwiperVideoSlider() {
     const swiperVideo = document.querySelector(".swiper-video__slider");
     if (!swiperVideo) return;
@@ -270,6 +271,15 @@ function windowLoaded() {
   }
 
   updateHeightSwiperVideoSlider();
+
+  //* Функція для зміни data-атрибуту data-scroll в Header
+  function updateDataAttributeBasedOnHeight() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+    const headerHeight = header.offsetHeight;
+    header.setAttribute("data-scroll", headerHeight);
+  }
+  updateDataAttributeBasedOnHeight();
 
   // document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
