@@ -6,6 +6,10 @@
   padding-block: toRem(27);
   z-index: 60;
 
+  @media (max-width:$tablet) {
+    padding-block: toRem(18);
+  }
+
   &._header-scroll {
     position: fixed;
     inset-block-start: -200%;

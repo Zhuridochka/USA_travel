@@ -1,0 +1,61 @@
+//========================================================================================================================================================
+.excursions {
+
+  // .excursions__hero
+  &__hero {}
+}
+
+//========================================================================================================================================================
+.hero-excursions {
+  position: relative;
+
+  // .hero-excursions__image-bg  
+  &__image-bg {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
+      backdrop-filter: blur(0.5px);
+      filter: blur(0.5px);
+    }
+  }
+
+  // .hero-excursions__image  
+  &__image {
+    aspect-ratio: 1440 / 289;
+
+    @media (max-width:$mobile) {
+      aspect-ratio: 768 / 510;
+    }
+
+    @media (max-width: toEm(428)) {
+      aspect-ratio: 428 / 370;
+    }
+  }
+
+  // .hero-excursions__container
+  &__container {
+    padding-block-start: toRem(142);
+    padding-block-end: toRem(59);
+    @include adaptiveValue("padding-block", 225, 150, 1, 767.98, 320);
+  }
+
+  // .hero-excursions__title
+  &__title {
+    position: relative;
+    z-index: 5;
+    font-weight: 700;
+    color: $whiteColor;
+    @include adaptiveValue("font-size", 72, 30);
+  }
+}
