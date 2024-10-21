@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 @@include('html/_head.htm',{
 "title":"HomePage"
 })
@@ -194,7 +194,7 @@
 											</div>
 											<div class="item-popular__text">
 												<p>
-													We invite you to the excursion <br>"Sightseeing tour of Los Angeles":</br>
+													We invite you to the excursion <br>"Sightseeing tour of Los Angeles":
 													Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, magnam. Fuga, aut nemo tempore ratione architecto numquam consequatur, sed cupiditate iste, id molestias. Perspiciatis obcaecati possimus, ut quibusdam voluptatem officis...
 												</p>
 											</div>
@@ -553,7 +553,10 @@
 
 			<section class="page__feedback feedback">
 				<div class="feedback__bg-image">
-					<img class="feedback__image ibg" src="@img/feedback/rectangle.jpg" alt="Image background main">
+					<picture>
+						<source media="(max-width: 428.98px)" srcset="img/feedback/rectangle_tall.jpg">
+						<img class="feedback__image ibg" src="@img/feedback/rectangle.jpg" alt="Image background main">
+					</picture>
 				</div>
 				<div class="feedback__container">
 					<div class="feedback__box">
@@ -563,25 +566,29 @@
 								<div class="header-feedback__text">Leave a request and we will answer</div>
 							</div>
 							<div class="feedback__form">
-								<form class="form form--fdb" action="https://jkorpela.fi/cgi-bin/echo.cgi">
-									<div class="form__line line form__line--fdb">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Name" class="form__input form__input--fdb input">
+								<form class="form form-feedback" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+									<div class="form-feedback__line line">
+										<input required autocomplete="off" type="text" name="form[name]" data-error="Error" placeholder="Name" class="form-feedback__input input input--fbd" id="name">
 									</div>
-									<div class="form__line line form__line--fdb">
-										<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Phone number" class="form__input form__input--fdb input">
+
+									<div class="form-feedback__line line">
+										<input required autocomplete="off" type="tel" name="form[phone]" data-error="Error" placeholder="Phone number" class="form-feedback__input input input--fbd" id="phone">
 									</div>
-									<div class="form__line line form__line--fdb">
-										<input data-required="email" data-error="Incorrect email entered" autocomplete="off" type="text" name="form[]" placeholder="Email" class="form__input form__input--fdb input">
+
+									<div class="form-feedback__line line">
+										<input data-required="email" required autocomplete="off" type="email" name="form[email]" data-error="Error" placeholder="Email" class="form-feedback__input input input--fbd" id="email">
 									</div>
-									<button type="submit" class="form__button form__button--fdb button">Leave a request</button>
+
+									<button type="submit" class="form-feedback__button  button button--fdb">Leave a request</button>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-		</main>
-		@@include('html/_footer.htm',{})
+	</div>
+	</section>
+	</main>
+	@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>

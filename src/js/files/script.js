@@ -270,6 +270,7 @@ function windowLoaded() {
   }
 
   updateHeightSwiperVideoSlider();
+
   // document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
 }

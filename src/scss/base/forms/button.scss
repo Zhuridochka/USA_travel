@@ -30,6 +30,21 @@
 		padding: toRem(13) toRem(0);
 	}
 
+	&--fdb {
+		margin-block-start: toRem(35);
+		max-inline-size: toRem(230);
+
+		@media (max-width: toEm(540)) {
+			margin: 55px auto 0 auto;
+		}
+
+		@media (max-width: toEm(381)) {
+			inline-size: 100%;
+			padding-inline: toRem(5);
+			margin: 35px auto 0 auto;
+		}
+	}
+
 	&--fw {
 		width: 100%;
 	}
