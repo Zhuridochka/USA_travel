@@ -17,9 +17,64 @@
           </picture>
         </div>
         <div class="hero-excursions__container">
-          <h1 class="hero-excursions__title">НАШИ ЭКСКУРСИИ</h1>
+          <h1 class="hero-excursions__title">наши экскурсии</h1>
         </div>
       </section>
+
+      <div class="excursions__tours tours">
+        <div class="tours__container">
+          <div data-tabs class="tours__tabs tabs">
+            <nav data-tabs-titles class="tabs__navigation">
+              <button type="button" class="tabs__title _tab-active">bus tour</button>
+              <button type="button" class="tabs__title">jeeping</button>
+              <button type="button" class="tabs__title">yachting</button>
+              <button type="button" class="tabs__title">canyoning</button>
+            </nav>
+            <div data-tabs-body class="tabs__content">
+              <div class="tabs__body">
+                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" nctype="multipart/form-data" method="POST">
+                  <div class="form-excursions__line line">
+                    <select name="form[town]" data-class-modif="form">
+                      <option value="1" selected>New York</option>
+                      <option value="2">Pennsylvania</option>
+                      <option value="3">Texas</option>
+                      <option value="4">Montana</option>
+                      <option value="5">Minnesota</option>
+                      <option value="6">Idaho</option>
+                      <option value="7">Florida</option>
+                      <option value="8">California</option>
+                    </select>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <input data-datepicker autocomplete="off" type="text" name="form[date]" data-error="error" placeholder="10 ноября 2021" class="form-excursions__input _icon-map">
+                  </div>
+                  <div class="form-excursions__line line">
+                    <select name="form[people]" data-class-modif="form">
+                      <option value="1" selected>5 people</option>
+                      <option value="2">1 person</option>
+                      <option value="3">2 people</option>
+                      <option value="4">3 people</option>
+                      <option value="5">4 people</option>
+                      <option value="6">5 people</option>
+                      <option value="7">6 people</option>
+                    </select>
+                  </div>
+                  <button class="form-excursions__button button button--big" type="submit">Show</button>
+                </form>
+              </div>
+              <div class="tabs__body">
+                Вміст другого таба
+              </div>
+              <div class="tabs__body">
+                Вміст третього таба
+              </div>
+              <div class="tabs__body">
+                Вміст четвертого таба
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     @@include('html/_footer.htm',{})
   </div>

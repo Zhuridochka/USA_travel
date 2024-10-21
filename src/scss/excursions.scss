@@ -1,8 +1,16 @@
 //========================================================================================================================================================
 .excursions {
+  background-color: #FBFBFB;
 
   // .excursions__hero
-  &__hero {}
+  &__hero {
+    margin-block-end: toRem(40);
+  }
+
+  // .excursions__tours
+  &__tours {
+    margin-block-end: toRem(38);
+  }
 }
 
 //========================================================================================================================================================
@@ -53,9 +61,119 @@
   // .hero-excursions__title
   &__title {
     position: relative;
-    z-index: 5;
+    z-index: 2;
+    text-transform: uppercase;
     font-weight: 700;
     color: $whiteColor;
     @include adaptiveValue("font-size", 72, 30);
   }
 }
+
+//========================================================================================================================================================
+.tours {
+
+  // .tours__container
+  &__container {
+    border-radius: toRem(10);
+    box-shadow: 0px 0px toRem(40) 0px rgba(0, 0, 0, 0.05);
+    background-color: $whiteColor;
+    padding: toRem(60);
+  }
+
+  // .tours__tabs
+
+  &__tabs {}
+}
+
+//===========
+
+.tabs {
+
+  // .tabs__navigation
+
+  &__navigation {}
+
+  // .tabs__title
+
+  &__title {}
+
+  // .tabs__content
+
+  &__content {}
+
+  // .tabs__body
+
+  &__body {}
+}
+
+
+.form-excursions {
+  display: flex;
+  column-gap: toRem(20);
+  align-items: center;
+  justify-content: space-between;
+
+  // .form-excursions__line
+  &__line {
+    max-block-size: toRem(235);
+  }
+
+  // .form-excursions__input
+  &__input {
+
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px toRem(15) 0px rgba(0, 0, 0, 0.10);
+    font-size: toRem(14);
+    font-weight: 500;
+    line-height: 1.214286;
+    height: toRem(50);
+    padding: toRem(16) toRem(149) toRem(17) toRem(25);
+    gap: toRem(10);
+
+    &::placeholder {
+      min-inline-size: toRem(120);
+      color: $mainColor;
+      font-weight: 500;
+    }
+
+    &._form-focus {
+      border: toRem(2) solid $yellowColor;
+      outline: #000;
+    }
+  }
+
+  // .form-excursions__button
+
+  &__button {}
+}
+
+//=======
+
+
+// .form-excursions {
+//   inline-size: 100%;
+//   display: flex;
+//   align-items: center;
+//   gap: toRem(20);
+
+//   // .form-excursions__line
+
+//   &__line {}
+
+//   // .form-excursions__select
+
+//   &__select {}
+
+//   // .form-excursions__input
+
+//   &__input {}
+
+//   // .form-excursions__icon
+
+//   &__icon {}
+
+//   // .form-excursions__button
+
+//   &__button {}
+// }

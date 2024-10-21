@@ -52,7 +52,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
-//flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показати ще"
@@ -126,10 +126,10 @@ flsForms.formSubmit();
 // flsForms.formRating();
 
 /* Модуль роботи з select. */
-// import './libs/select.js'
+import "./libs/select.js";
 
 /* Модуль роботи з календарем */
-// import './files/forms/datepicker.js'
+import "./files/forms/datepicker.js";
 
 /* (У роботі) Модуль роботи з масками.*/
 /*

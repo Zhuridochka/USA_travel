@@ -26,6 +26,11 @@
 		transition: all 0.4s;
 	}
 
+	&--big {
+		padding-inline: toRem(82);
+		border-radius: toRem(10);
+	}
+
 	&--rm {
 		padding: toRem(13) toRem(0);
 	}
