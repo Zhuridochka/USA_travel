@@ -17,7 +17,7 @@
           </picture>
         </div>
         <div class="hero-excursions__container">
-          <h1 class="hero-excursions__title">наши экскурсии</h1>
+          <h1 class="hero-excursions__title">our excursions</h1>
         </div>
       </section>
 
@@ -34,7 +34,7 @@
               <div class="tabs__body">
                 <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
                   <div class="form-excursions__line line">
-                    <select name="form[town]" data-class-modif="form">
+                    <select name="form[geo]" data-class-modif="form-geo">
                       <option value="1" selected>New York</option>
                       <option value="2">Pennsylvania</option>
                       <option value="3">Texas</option>
@@ -46,10 +46,11 @@
                     </select>
                   </div>
                   <div class="form-excursions__line line">
-                    <input data-datepicker autocomplete="off" type="text" name="form[date]" data-error="error" placeholder="10 ноября 2021" class="form-excursions__input _icon-map">
+                    <input data-datepicker type="text" name="form[date]" placeholder="10 september 2024" class="form-excursions__input">
+                    <span class=" _icon-calendar"></span>
                   </div>
                   <div class="form-excursions__line line">
-                    <select name="form[people]" data-class-modif="form">
+                    <select name="form[people]" data-class-modif="form-people">
                       <option value="1" selected>5 people</option>
                       <option value="2">1 person</option>
                       <option value="3">2 people</option>
@@ -63,18 +64,108 @@
                 </form>
               </div>
               <div class="tabs__body">
-                Вміст другого таба
+                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                  <div class="form-excursions__line line">
+                    <select name="form[geo]" data-class-modif="form-geo">
+                      <option value="1">New York</option>
+                      <option value="2">Pennsylvania</option>
+                      <option value="3">Texas</option>
+                      <option value="4">Montana</option>
+                      <option value="5" selected>Minnesota</option>
+                      <option value="6">Idaho</option>
+                      <option value="7">Florida</option>
+                      <option value="8">California</option>
+                    </select>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <input data-datepicker type="text" name="form[date]" placeholder="10 september 2024" class="form-excursions__input">
+                    <span class=" _icon-calendar"></span>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <select name="form[people]" data-class-modif="form-people">
+                      <option value="1">1 people</option>
+                      <option value="2">2 person</option>
+                      <option value="3" selected>3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 people</option>
+                      <option value="6">6 people</option>
+                      <option value="7">7 people</option>
+                    </select>
+                  </div>
+                  <button class="form-excursions__button button button--big" type="submit">Show</button>
+                </form>
               </div>
               <div class="tabs__body">
-                Вміст третього таба
+                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                  <div class="form-excursions__line line">
+                    <select name="form[geo]" data-class-modif="form-geo">
+                      <option value="1">New York</option>
+                      <option value="2">Pennsylvania</option>
+                      <option value="3">Texas</option>
+                      <option value="4">Montana</option>
+                      <option value="5">Minnesota</option>
+                      <option value="6">Idaho</option>
+                      <option value="7">Florida</option>
+                      <option value="8" selected>California</option>
+                    </select>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <input data-datepicker type="text" name="form[date]" placeholder="10 september 2024" class="form-excursions__input">
+                    <span class=" _icon-calendar"></span>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <select name="form[people]" data-class-modif="form-people">
+                      <option value="1">1 people</option>
+                      <option value="2" selected>2 person</option>
+                      <option value="3">3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 people</option>
+                      <option value="6">6 people</option>
+                      <option value="7">7 people</option>
+                    </select>
+                  </div>
+                  <button class="form-excursions__button button button--big" type="submit">Show</button>
+                </form>
               </div>
               <div class="tabs__body">
-                Вміст четвертого таба
+                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                  <div class="form-excursions__line line">
+                    <select name="form[geo]" data-class-modif="form-geo">
+                      <option value="1" selected>New York</option>
+                      <option value="2">Pennsylvania</option>
+                      <option value="3">Texas</option>
+                      <option value="4">Montana</option>
+                      <option value="5">Minnesota</option>
+                      <option value="6">Idaho</option>
+                      <option value="7">Florida</option>
+                      <option value="8">California</option>
+                    </select>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <input data-datepicker type="text" name="form[date]" placeholder="10 november 2024" class="form-excursions__input">
+                    <span class=" _icon-calendar"></span>
+                  </div>
+                  <div class="form-excursions__line line">
+                    <select name="form[people]" data-class-modif="form-people">
+                      <option value="1">1 people</option>
+                      <option value="2">2 person</option>
+                      <option value="3">3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 people</option>
+                      <option value="6" selected>6 people</option>
+                      <option value="7">7 people</option>
+                    </select>
+                  </div>
+                  <button class="form-excursions__button button button--big" type="submit">Show</button>
+                </form>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+
+
     </main>
     @@include('html/_footer.htm',{})
   </div>

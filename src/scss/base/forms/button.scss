@@ -27,6 +27,7 @@
 	}
 
 	&--big {
+		min-inline-size: toRem(235);
 		padding-inline: toRem(82);
 		border-radius: toRem(10);
 	}

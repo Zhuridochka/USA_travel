@@ -78,61 +78,40 @@
     box-shadow: 0px 0px toRem(40) 0px rgba(0, 0, 0, 0.05);
     background-color: $whiteColor;
     padding: toRem(60);
+
+    @media (max-width: toEm(640)) {
+      padding-inline: toRem(35);
+    }
   }
 
   // .tours__tabs
-
   &__tabs {}
 }
 
-//===========
-
-.tabs {
-
-  // .tabs__navigation
-
-  &__navigation {}
-
-  // .tabs__title
-
-  &__title {}
-
-  // .tabs__content
-
-  &__content {}
-
-  // .tabs__body
-
-  &__body {}
-}
-
-
 .form-excursions {
-  display: flex;
-  column-gap: toRem(20);
-  align-items: center;
-  justify-content: space-between;
+  gap: toRem(20);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(toRem(220), 1fr));
 
   // .form-excursions__line
-  &__line {
-    max-block-size: toRem(235);
-  }
+  &__line {}
 
   // .form-excursions__input
   &__input {
-
+    position: relative;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0px 0px toRem(15) 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 toRem(15) 0 rgba(0, 0, 0, 0.10);
     font-size: toRem(14);
     font-weight: 500;
     line-height: 1.214286;
     height: toRem(50);
     padding: toRem(16) toRem(149) toRem(17) toRem(25);
     gap: toRem(10);
+    display: flex;
 
     &::placeholder {
-      min-inline-size: toRem(120);
+      min-inline-size: toRem(140);
       color: $mainColor;
       font-weight: 500;
     }
@@ -143,37 +122,24 @@
     }
   }
 
-  // .form-excursions__button
+  span {
+    &::before {
+      position: absolute;
+      inset-block-start: toRem(15);
+      inset-inline-end: toRem(25);
+      align-self: stretch;
+      flex: 0 0 toRem(20);
+      font-size: toRem(19);
+      color: #0499DD;
+      transition: all 0.3s ease 0s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
+  // .form-excursions__button
   &__button {}
 }
 
-//=======
-
-
-// .form-excursions {
-//   inline-size: 100%;
-//   display: flex;
-//   align-items: center;
-//   gap: toRem(20);
-
-//   // .form-excursions__line
-
-//   &__line {}
-
-//   // .form-excursions__select
-
-//   &__select {}
-
-//   // .form-excursions__input
-
-//   &__input {}
-
-//   // .form-excursions__icon
-
-//   &__icon {}
-
-//   // .form-excursions__button
-
-//   &__button {}
-// }
+//========================================================================================================================================================
