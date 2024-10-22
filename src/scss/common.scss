@@ -403,22 +403,20 @@
     @media (max-width:$mobile) {
       inline-size: percent(372, 610);
       flex-basis: percent(372, 610);
-      aspect-ratio: 372 / 444;
+      // aspect-ratio: 372 / 444;
       padding-inline: toRem(33);
     }
 
     @media (max-width:$mobileSmall) {
       inline-size: 100%;
       flex-basis: 100%;
-      aspect-ratio: 380 / 450;
-      //flex-shrink: 1;
+      flex-shrink: 1;
       padding-block-start: toRem(24);
-
-      padding-block-end: toRem(30);
+      padding-block-end: toRem(60);
     }
 
     @media (max-width: toEm(360)) {
-      padding-inline: toRem(10);
+      padding-inline: toRem(30);
     }
   }
 

@@ -11,6 +11,9 @@
   &__tours {
     margin-block-end: toRem(38);
   }
+
+  // .excursions__content  
+  &__content {}
 }
 
 //========================================================================================================================================================
@@ -143,3 +146,207 @@
 }
 
 //========================================================================================================================================================
+.content-excursions {
+  padding-block-end: toRem(85);
+
+  // .content-excursions__containers
+  &__container {
+    display: flex;
+    column-gap: toRem(40);
+
+    @media (max-width:$tablet) {
+      column-gap: toRem(20);
+    }
+
+    @media (max-width:$mobile) {
+      flex-direction: column-reverse;
+      row-gap: toRem(150);
+    }
+  }
+
+  // .content-excursions__filter
+  &__filter {
+    inline-size: toRem(295);
+    flex: 1 1 toRem(295);
+
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  // .content-excursions__body
+  &__body {
+    inline-size: toRem(779);
+    flex: 1 1 toRem(779);
+
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.filter {
+
+  // .filter__title
+
+  &__title {}
+
+  // .filter__body
+
+  &__body {}
+
+  // .filter__form
+
+  &__form {}
+}
+
+.form-filter {
+
+  // .form-filter__item
+
+  &__item {}
+}
+
+.spollers {
+
+  // .spollers__item
+
+  &__item {}
+
+  // .spollers__title
+
+  &__title {}
+
+  // .spollers__body
+
+  &__body {}
+}
+
+.item-filter {
+
+  // .item-filter__header
+
+  &__header {}
+
+  // .item-filter__body
+
+  &__body {}
+}
+
+.filter-price {
+
+  // .filter-price__box
+
+  &__box {}
+
+  // .filter-price__input
+
+  &__input {
+
+    // .filter-price__input--from
+
+    &--from {}
+
+    // .filter-price__input--to
+
+    &--to {}
+  }
+
+  // .filter-price__range
+
+  &__range {}
+}
+
+.body-excursions {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(40);
+
+  // .body-excursions__title
+  &__title {}
+
+  // .body-excursions__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+  }
+
+  // .body-excursions__item
+  &__item {}
+
+  // .body-excursions__pages
+  &__pages {
+    align-self: center;
+  }
+}
+
+.pages-excursions {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(5);
+
+  &__prev-link,
+  &__next-link {
+    inline-size: toRem(18);
+    flex: 0 0 toRem(18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      font-size: toRem(12);
+      transition: color 0.4s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          color: #0499DD;
+        }
+      }
+    }
+  }
+
+  // .pages-excursions__prev-link
+  &__prev-link {
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .pages-excursions__list
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+  }
+
+  // .pages-excursions__item
+  &__item {
+    @media (any-hover: hover) {
+      &:hover {
+        .pages-excursions__link {
+          color: #0499DD;
+        }
+      }
+    }
+  }
+
+  // .pages-excursions__link
+  &__link {
+    font-weight: 500;
+    line-height: 1.214286;
+    /* 17/14 */
+    transition: color 0.4s;
+  }
+
+  // .pages-excursions__next-link
+  &__next-link {
+    &::before {
+      transform: rotate(-90deg);
+    }
+  }
+}

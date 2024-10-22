@@ -32,7 +32,7 @@
             </nav>
             <div data-tabs-body class="tabs__content">
               <div class="tabs__body">
-                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                <form class="tabs__form-excursions form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
                   <div class="form-excursions__line line">
                     <select name="form[geo]" data-class-modif="form-geo">
                       <option value="1" selected>New York</option>
@@ -64,7 +64,7 @@
                 </form>
               </div>
               <div class="tabs__body">
-                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                <form class="tabs__form-excursions form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
                   <div class="form-excursions__line line">
                     <select name="form[geo]" data-class-modif="form-geo">
                       <option value="1">New York</option>
@@ -96,7 +96,7 @@
                 </form>
               </div>
               <div class="tabs__body">
-                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                <form class="tabs__form-excursions form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
                   <div class="form-excursions__line line">
                     <select name="form[geo]" data-class-modif="form-geo">
                       <option value="1">New York</option>
@@ -128,7 +128,7 @@
                 </form>
               </div>
               <div class="tabs__body">
-                <form class="form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
+                <form class="tabs__form-excursions form-excursions" action="https://jkorpela.fi/cgi-bin/echo.cgi" enctype="multipart/form-data" method="POST">
                   <div class="form-excursions__line line">
                     <select name="form[geo]" data-class-modif="form-geo">
                       <option value="1" selected>New York</option>
@@ -159,12 +159,231 @@
                   <button class="form-excursions__button button button--big" type="submit">Show</button>
                 </form>
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
+      <div class="excursions__content content-excursions">
+        <div class="content-excursions__container">
+          <aside class="content-excursions__filter filter">
+            <div class="filter__title">filter</div>
+            <div class="filter__body">
+              <form action="#" data-spollers class="filter__form form-filter spollers">
+                <details data-open class="form-filter__item item-filter spollers__item">
+                  <summary class="item-filter__header spollers__title _icon-plus">Price</summary>
+                  <div class="item-filter__body filter-price spollers__body">
+                    <div class="filter-price__box">
+                      <input data-from="" id="price-start" type="text" class="filter-price__input filter-price__input--from">
+                      <input data-to id="price-end" type="text" class="filter-price__input filter-price__input--to">
+                    </div>
+                    <div class="filter-price__range"></div>
+                  </div>
+                </details>
+              </form>
+
+            </div>
+          </aside>
+          <section class="content-excursions__body body-excursions">
+            <h2 class="body-excursions__title title">Our tours</h2>
+            <div class="body-excursions__list">
+              <article class="body-excursions__item item-tour">
+                <div class="item-tour__picture">
+                  <img class="item-tour__image" src="@img/tours/image_01.jpg" alt="Image of mountain">
+                </div>
+                <div class="item-tour__inner">
+                  <div class="item-tour__content">
+                    <div class="item-tour__top">
+                      <div class="item-tour__subtitle">Bus tour</div>
+                      <h3 class="item-tour__title-name">Los Angeles Sightseeing Tour</h3>
+                      <div class="item-tour__info info-popular">
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">1618 $</div>
+                          <div class="item-info-popular__ticket">Adult ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">950 $</div>
+                          <div class="item-info-popular__ticket">Child ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular ">
+                          <div class="item-info-popular__time _icon-time">6 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-tour__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quis sunt qui labore deleniti mollitia aliquid eligendi corrupti! Temporibus quam tempora ipsam ullam voluptatum consequuntur iusto aliquid earum necessitatibus cumque?
+                      </p>
+                    </div>
+                    <div class="item-tour__actions actions-item-tour">
+                      <a href="#" class="actions-item-tour__button button button--rm">Read more</a>
+                      <a href="#" class="actions-item-tour__like like _icon-heart"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="body-excursions__item item-tour">
+                <div class="item-tour__picture">
+                  <img class="item-tour__image" src="@img/tours/image_01.jpg" alt="Image of mountain">
+                </div>
+                <div class="item-tour__inner">
+                  <div class="item-tour__content">
+                    <div class="item-tour__top">
+                      <div class="item-tour__subtitle">Bus tour</div>
+                      <h3 class="item-tour__title-name">Los Angeles Sightseeing Tour</h3>
+                      <div class="item-tour__info info-popular">
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">1618 $</div>
+                          <div class="item-info-popular__ticket">Adult ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">950 $</div>
+                          <div class="item-info-popular__ticket">Child ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular ">
+                          <div class="item-info-popular__time _icon-time">6 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-tour__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quis sunt qui labore deleniti mollitia aliquid eligendi corrupti! Temporibus quam tempora ipsam ullam voluptatum consequuntur iusto aliquid earum necessitatibus cumque?
+                      </p>
+                    </div>
+                    <div class="item-tour__actions actions-item-tour">
+                      <a href="#" class="actions-item-tour__button button button--rm">Read more</a>
+                      <a href="#" class="actions-item-tour__like like _icon-heart"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="body-excursions__item item-tour">
+                <div class="item-tour__picture">
+                  <img class="item-tour__image" src="@img/tours/image_01.jpg" alt="Image of mountain">
+                </div>
+                <div class="item-tour__inner">
+                  <div class="item-tour__content">
+                    <div class="item-tour__top">
+                      <div class="item-tour__subtitle">Bus tour</div>
+                      <h3 class="item-tour__title-name">Los Angeles Sightseeing Tour</h3>
+                      <div class="item-tour__info info-popular">
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">1618 $</div>
+                          <div class="item-info-popular__ticket">Adult ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">950 $</div>
+                          <div class="item-info-popular__ticket">Child ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular ">
+                          <div class="item-info-popular__time _icon-time">6 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-tour__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quis sunt qui labore deleniti mollitia aliquid eligendi corrupti! Temporibus quam tempora ipsam ullam voluptatum consequuntur iusto aliquid earum necessitatibus cumque?
+                      </p>
+                    </div>
+                    <div class="item-tour__actions actions-item-tour">
+                      <a href="#" class="actions-item-tour__button button button--rm">Read more</a>
+                      <a href="#" class="actions-item-tour__like like _icon-heart"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="body-excursions__item item-tour">
+                <div class="item-tour__picture">
+                  <img class="item-tour__image" src="@img/tours/image_01.jpg" alt="Image of mountain">
+                </div>
+                <div class="item-tour__inner">
+                  <div class="item-tour__content">
+                    <div class="item-tour__top">
+                      <div class="item-tour__subtitle">Bus tour</div>
+                      <h3 class="item-tour__title-name">Los Angeles Sightseeing Tour</h3>
+                      <div class="item-tour__info info-popular">
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">1618 $</div>
+                          <div class="item-info-popular__ticket">Adult ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">950 $</div>
+                          <div class="item-info-popular__ticket">Child ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular ">
+                          <div class="item-info-popular__time _icon-time">6 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-tour__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quis sunt qui labore deleniti mollitia aliquid eligendi corrupti! Temporibus quam tempora ipsam ullam voluptatum consequuntur iusto aliquid earum necessitatibus cumque?
+                      </p>
+                    </div>
+                    <div class="item-tour__actions actions-item-tour">
+                      <a href="#" class="actions-item-tour__button button button--rm">Read more</a>
+                      <a href="#" class="actions-item-tour__like like _icon-heart"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="body-excursions__item item-tour">
+                <div class="item-tour__picture">
+                  <img class="item-tour__image" src="@img/tours/image_01.jpg" alt="Image of mountain">
+                </div>
+                <div class="item-tour__inner">
+                  <div class="item-tour__content">
+                    <div class="item-tour__top">
+                      <div class="item-tour__subtitle">Bus tour</div>
+                      <h3 class="item-tour__title-name">Los Angeles Sightseeing Tour</h3>
+                      <div class="item-tour__info info-popular">
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">1618 $</div>
+                          <div class="item-info-popular__ticket">Adult ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular">
+                          <div class="item-info-popular__price _icon-coins">950 $</div>
+                          <div class="item-info-popular__ticket">Child ticket</div>
+                        </div>
+                        <div class="info-popular__item item-info-popular ">
+                          <div class="item-info-popular__time _icon-time">6 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-tour__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quis sunt qui labore deleniti mollitia aliquid eligendi corrupti! Temporibus quam tempora ipsam ullam voluptatum consequuntur iusto aliquid earum necessitatibus cumque?
+                      </p>
+                    </div>
+                    <div class="item-tour__actions actions-item-tour">
+                      <a href="#" class="actions-item-tour__button button button--rm">Read more</a>
+                      <a href="#" class="actions-item-tour__like like _icon-heart"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="body-excursions__pages pages-excursions">
+              <a href="#" class="pages-excursions__prev-link _icon-Frame"></a>
+              <ul class="pages-excursions__list">
+                <li class="pages-excursions__item">
+                  <a href="#" class="pages-excursions__link">1</a>
+                </li>
+                <li class="pages-excursions__item">
+                  <a href="#" class="pages-excursions__link">2</a>
+                </li>
+                <li class="pages-excursions__item">
+                  <a href="#" class="pages-excursions__link">...</a>
+                </li>
+                <li class="pages-excursions__item">
+                  <a href="#" class="pages-excursions__link">5</a>
+                </li>
+              </ul>
+              <a href="#" class="pages-excursions__next-link _icon-Frame"></a>
+            </div>
+          </section>
+        </div>
+      </div>
 
     </main>
     @@include('html/_footer.htm',{})
