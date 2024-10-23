@@ -13,7 +13,13 @@
   }
 
   // .excursions__content  
-  &__content {}
+  &__content {
+    margin-block-end: toRem(80);
+
+    @media (max-width:$mobile) {
+      margin-block-end: toRem(150);
+    }
+  }
 }
 
 //========================================================================================================================================================
@@ -147,7 +153,6 @@
 
 //========================================================================================================================================================
 .content-excursions {
-  padding-block-end: toRem(85);
 
   // .content-excursions__containers
   &__container {
@@ -345,16 +350,29 @@
 .body-excursions {
   display: flex;
   flex-direction: column;
-  row-gap: toRem(40);
 
   // .body-excursions__title
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
 
   // .body-excursions__list
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: toRem(20);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-block-end: toRem(70);
+      }
+    }
   }
 
   // .body-excursions__item
