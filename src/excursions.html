@@ -167,21 +167,76 @@
       <div class="excursions__content content-excursions">
         <div class="content-excursions__container">
           <aside class="content-excursions__filter filter">
-            <div class="filter__title">filter</div>
-            <div class="filter__body">
-              <form action="#" data-spollers class="filter__form form-filter spollers">
-                <details data-open class="form-filter__item item-filter spollers__item">
-                  <summary class="item-filter__header spollers__title _icon-plus">Price</summary>
-                  <div class="item-filter__body filter-price spollers__body">
-                    <div class="filter-price__box">
-                      <input data-from="" id="price-start" type="text" class="filter-price__input filter-price__input--from">
-                      <input data-to id="price-end" type="text" class="filter-price__input filter-price__input--to">
-                    </div>
-                    <div class="filter-price__range"></div>
-                  </div>
-                </details>
-              </form>
+            <div class="filter__wrap">
+              <div class="filter__title">filter</div>
+              <div class="filter__body">
+                <form action="#" data-spollers class="filter__form form-filter spollers">
 
+                  <details data-open class="form-filter__item item-filter spollers__item">
+                    <summary class="item-filter__header spollers__title _icon-plus">Price
+                    </summary>
+                    <div class="item-filter__body filter-price spollers__body">
+                      <div class="filter-price__box">
+                        <input data-from="" id="price-start" type="text" class="filter-price__input filter-price__input--from">
+                        <input data-to id="price-end" type="text" class="filter-price__input filter-price__input--to">
+                      </div>
+                      <div class="filter-price__range"></div>
+                    </div>
+                  </details>
+
+                  <details data-open class="form-filter__item item-filter spollers__item">
+                    <summary class="item-filter__header spollers__title _icon-plus">Number of people</summary>
+                    <div class="item-filter__body spollers__body">
+                      <div class="item-filter__options options">
+                        <div class="options__item">
+                          <input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                          <label for="o_1" class="options__label"><span class="options__text">1 pers</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_2" class="options__input" type="radio" value="2" name="option">
+                          <label for="o_2" class="options__label"><span class="options__text">2 peop</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_3" class="options__input" type="radio" value="3" name="option">
+                          <label for="o_3" class="options__label"><span class="options__text">3 peop</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_4" class="options__input" type="radio" value="4" name="option">
+                          <label for="o_4" class="options__label"><span class="options__text">4 peop</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input checked id="o_5" class="options__input" type="radio" value="5" name="option">
+                          <label for="o_5" class="options__label"><span class="options__text">5 peop</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_10" class="options__input" type="radio" value="10" name="option">
+                          <label for="o_10" class="options__label"><span class="options__text">More 10 peop</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details data-open class="form-filter__item item-filter spollers__item">
+                    <summary class="item-filter__header spollers__title _icon-plus">Place</summary>
+                    <div class="item-filter__body spollers__body">
+                    </div>
+                  </details>
+
+                  <details class="form-filter__item item-filter spollers__item">
+                    <summary class="item-filter__header spollers__title _icon-plus">Duration</summary>
+                    <div class="item-filter__body spollers__body">
+                    </div>
+                  </details>
+
+                  <details class="form-filter__item item-filter spollers__item">
+                    <summary class="item-filter__header spollers__title _icon-plus">Date</summary>
+                    <div class="item-filter__body spollers__body">
+                    </div>
+                  </details>
+
+                </form>
+
+              </div>
             </div>
           </aside>
           <section class="content-excursions__body body-excursions">
@@ -384,6 +439,15 @@
           </section>
         </div>
       </div>
+      //==================
+      <div data-spollers class="spollers">
+        <details class="spollers__item">
+          <summary class="spollers__title">Заголовок спойлера</summary>
+          <div class="spollers__body">Контент спойлера</div>
+        </details>
+      </div>
+      //==============
+
 
     </main>
     @@include('html/_footer.htm',{})
