@@ -19,6 +19,10 @@
 		border-block-end: toRem(1) solid #D4D4D4;
 		padding: toRem(13) toRem(9);
 
+		@media (max-width: toEm(480)) {
+			font-size: toRem(12);
+		}
+
 		&._tab-active {
 			border-block-end: toRem(2) solid #0499DD;
 			color: #0499DD;
@@ -28,7 +32,6 @@
 	// .tabs__content
 	&__content {
 		inline-size: 100%;
-
 	}
 
 	// .tabs__body

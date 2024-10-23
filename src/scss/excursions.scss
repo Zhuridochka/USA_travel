@@ -91,6 +91,10 @@
     @media (max-width: toEm(640)) {
       padding-inline: toRem(35);
     }
+
+    @media (max-width: toEm(480)) {
+      padding-inline: toRem(15);
+    }
   }
 
   // .tours__tabs
