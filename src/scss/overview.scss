@@ -228,12 +228,12 @@
       overflow: hidden;
       border-radius: 0 toRem(10) toRem(10) 0;
 
-      @media (max-width:$tablet) {
+      @media (max-width:$mobile) {
         background-image: url('../img/more/image_for_calendar_768.jpg');
         inline-size: percent(479, 689);
       }
 
-      @media (max-width: toEm(630)) {
+      @media (max-width: toEm(428)) {
         background-image: url('../img/more/image_for_calendar_428.jpg');
         inline-size: percent(304, 404);
       }
