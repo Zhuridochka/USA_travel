@@ -19,6 +19,9 @@
     //margin-block-end: toRem(150);
   }
 
+  // .overview__route  
+  &__route {}
+
   // .overview__additional    
   &__additional {
     //margin-block-end: toRem(150);
@@ -33,9 +36,7 @@
   &__reviews {
     //margin-block-end: toRem(150);
   }
-
 }
-
 
 //========================================================================================================================================================
 .hero-overview {
@@ -303,10 +304,161 @@
 }
 
 //========================================================================================================================================================
+.route {
+  @include gridContainer(3);
+
+  // .route__box
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(30);
+    row-gap: toRem(20);
+
+    @media (max-width: toEm(940)) {
+      flex-direction: column;
+    }
+
+    @media (max-width:$mobileSmall) {
+      row-gap: toRem(0);
+    }
+  }
+
+  // .route__content
+  &__container {
+    inline-size: percent(500, 1280);
+    flex-basis: percent(500, 1280);
+
+    @media (max-width: toEm(940)) {
+      inline-size: 100%;
+    }
+  }
+
+  // .route__inner
+  &__inner {
+    padding-block: toRem(60);
+  }
+
+  // .route__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(90);
+    }
+  }
+
+  // .route__list
+  &__list {
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .route__subtitle
+  &__subtitle {
+    font-weight: 700;
+    color: $mainColor;
+    line-height: 1.214286;
+    /* 17/14 */
+    padding-inline-start: toRem(38);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .route__body
+  &__body {
+    inline-size: percent(614, 1280);
+    flex-basis: percent(614, 1280);
+
+    @media (max-width: toEm(940)) {
+      inline-size: 100%;
+    }
+  }
+
+  // .route__slider
+  &__slider {}
+
+  // .route__wrapper
+  &__wrapper {
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .route__slide
+  &__slide {}
+
+  // .route__control
+  &__control {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(50);
+  }
+
+  // .route__navigation
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev,
+  &__next {
+    inline-size: toRem(43);
+    block-size: toRem(43);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      color: $blueColor;
+      font-size: toRem(43);
+    }
+  }
+
+  // .route__prev
+  &__prev {
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .route__next
+  &__next {
+    &::before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  // .route__scrollbar
+  &__scrollbar {
+    inline-size: 100%;
+    block-size: toRem(2);
+    background-color: $grayColor;
+
+    .swiper-scrollbar-drag {
+      inline-size: percent(170, 774);
+      block-size: 100%;
+      background-color: $blueColor;
+
+      &:not(:first-child) {
+        margin: 0 toRem(6);
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    cursor: none;
+
+    &::before {
+      color: $grayColor;
+    }
+  }
+}
 
 //========================================================================================================================================================
 .additional {
-
 
   // .additional__container
   &__container {}

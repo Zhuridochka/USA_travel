@@ -5,7 +5,7 @@
 })
 
 <body>
-  < class="wrapper">
+  <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="overview">
       <section class="overview__hero hero-overview">
@@ -67,12 +67,115 @@
           </div>
         </div>
       </section>
-
       <section class="overview__calendar calendar">
         <div class="calendar__content">
           <div class="calendar__body">
             <h2 class="calendar__title title">Travel calendar</h2>
             <img class="calendar__image ibg" src="@img/more/planning-calendar(2).jpg" alt="Image planning-calenda">
+          </div>
+        </div>
+      </section>
+      <section class="overview__route route">
+        <div class="route__box">
+          <div class="route__container">
+            <div class="route__inner">
+              <h2 class="route__title title">Route Description</h2>
+              <ul class="route__list list-route">
+                <li class="list-route__item">
+                  <p class="list-route__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consectetur?
+                  </p>
+                </li>
+                <li class="list-route__item">
+                  <p class="list-route__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consectetur?
+                  </p>
+                </li>
+                <li class="list-route__item">
+                  <p class="list-route__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellat deleniti illum exercitationem blanditiis nisi vero velit, suscipit excepturi.
+                  </p>
+                </li>
+              </ul>
+              <div class="route__subtitle">Next, choose from:</div>
+              <ul class="route__list list-route">
+                <li class="list-route__item">
+                  <p class="list-route__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consectetur?
+                  </p>
+                </li>
+                <li class="list-route__item">
+                  <p class="list-route__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, consectetur?
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="route__body">
+            <div class="route__slider swiper">
+              <div class="route__wrapper swiper-wrapper">
+                <article class="route__slide swiper-slide item-route">
+                  <div class="item-route__wrapper">
+                    <div class="item-route__picture">
+                      <img class="item-route__image ibg" src="@img/gallery/picture_03.jpeg" alt="Image">
+                    </div>
+                    <div class="item-route__body">
+                      <h4 class="item-route__title">Los Angeles</h4>
+                    </div>
+                  </div>
+                </article>
+                <article class="route__slide swiper-slide item-route">
+                  <div class="item-route__wrapper">
+                    <div class="item-route__picture">
+                      <img class="item-route__image ibg" src="@img/route/image_1440.jpg" alt="Image">
+                    </div>
+                    <div class="item-route__body">
+                      <h4 class="item-route__title">Los Angeles</h4>
+                    </div>
+                  </div>
+                </article>
+                <article class="route__slide swiper-slide item-route">
+                  <div class="item-route__wrapper">
+                    <div class="item-route__picture">
+                      <img class="item-route__image ibg" src="@img/route/image_1440.jpg" alt="Image">
+                    </div>
+                    <div class="item-route__body">
+                      <h4 class="item-route__title">Los Angeles</h4>
+                    </div>
+                  </div>
+                </article>
+                <article class="route__slide swiper-slide item-route">
+                  <div class="item-route__wrapper">
+                    <div class="item-route__picture">
+                      <img class="item-route__image ibg" src="@img/route/image_1440.jpg" alt="Image">
+                    </div>
+                    <div class="item-route__body">
+                      <h4 class="item-route__title">Los Angeles</h4>
+                    </div>
+                  </div>
+                </article>
+                <article class="route__slide swiper-slide item-route">
+                  <div class="item-route__wrapper">
+                    <div class="item-route__picture">
+                      <img class="item-route__image ibg" src="@img/route/image_1440.jpg" alt="Image">
+                    </div>
+                    <div class="item-route__body">
+                      <h4 class="item-route__title">Los Angeles</h4>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="route__control">
+                <div class="route__navigation">
+                  <button type="button" class="route__prev swiper-button-prev _icon-Frame"></button>
+                  <button type="button" class="route__next swiper-button-next _icon-Frame"></button>
+                </div>
+                <!-- Якщо потрібен скролбар -->
+                <div class="route__scrollbar swiper-scrollbar"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -353,8 +456,8 @@
       </section>
     </main>
     @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_js.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
 </body>
 
 </html>

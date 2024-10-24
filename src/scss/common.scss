@@ -829,3 +829,108 @@
     color: $whiteColor;
   }
 }
+
+//=== Item-route
+.item-route {
+  border-radius: toRem(10);
+  overflow: hidden;
+
+  // .item-route__wrapper
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inline-size: 100%;
+      block-size: 100%;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+    }
+  }
+
+  // .item-route__picture
+  &__picture {
+    inline-size: toRem(413);
+    flex-basis: toRem(413);
+    aspect-ratio: 413 / 570;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    @media (max-width:$tablet) {
+      inline-size: toRem(295);
+      flex-basis: toRem(295);
+      aspect-ratio: 295 / 490;
+    }
+
+    @media (max-width: toEm(428)) {
+      inline-size: toRem(280);
+      flex-basis: toRem(280);
+      aspect-ratio: 280 / 540;
+    }
+  }
+
+  // .item-route__image
+  &__image {
+    aspect-ratio: 413 / 570;
+
+    @media (max-width: toEm(428)) {
+      aspect-ratio: 280 / 540;
+    }
+  }
+
+  // .item-route__body
+  &__body {
+    position: absolute;
+    inset-inline-start: percent(23, 413);
+    inset-block-start: percent(531, 570);
+    inline-size: auto;
+    block-size: 100%;
+    z-index: 2;
+  }
+
+  // .item-route__title
+  &__title {
+    font-weight: 500;
+    color: $yellowColor;
+  }
+}
+
+//=== List-route
+.list-route {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: toRem(21);
+
+  // .list-route__item
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: toRem(26);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: toRem(12);
+      block-size: toRem(12);
+      flex: 0 0 toRem(12);
+      border-radius: 50%;
+      background-color: $yellowColor;
+    }
+  }
+
+  // .list-route__text
+  &__text {
+    padding-inline-start: toRem(38);
+    font-weight: 500;
+    line-height: 1.214286;
+    /* 17/14 */
+    margin-block-start: toRem(-2);
+  }
+}
