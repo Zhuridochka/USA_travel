@@ -409,6 +409,11 @@
         background-image: url('../img/about/image_428.jpg');
         inline-size: percent(304, 404);
       }
+
+      @media (max-width: toEm(320)) {
+        background-image: url('../img/about/image_1440.jpg');
+        inline-size: 100%;
+      }
     }
   }
 
@@ -421,6 +426,15 @@
     padding-block-start: toRem(137);
     padding-block-end: toRem(136);
     padding-inline-start: toRem(24);
+
+    @media (max-width:$mobile) {
+      padding-block-end: toRem(179);
+    }
+
+    @media (max-width: toEm(428)) {
+      padding-block-start: toRem(159);
+      padding-block-end: toRem(159);
+    }
   }
 
   // .about__body

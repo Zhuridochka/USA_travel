@@ -1,21 +1,41 @@
 //========================================================================================================================================================
 .overview {
+  >* {
+    margin-block-end: toRem(150);
+  }
 
   // .overview__hero
   &__hero {
-    margin-block-end: toRem(150);
+    // margin-block-end: toRem(150);
   }
 
   // .overview__description  
   &__description {
-    margin-block-end: toRem(150);
+    //margin-block-end: toRem(150);
   }
 
   // .overview__calendar  
   &__calendar {
-    margin-block-end: toRem(150);
+    //margin-block-end: toRem(150);
   }
+
+  // .overview__additional    
+  &__additional {
+    //margin-block-end: toRem(150);
+  }
+
+  // .overview__gallery
+  &__gallery {
+    //margin-block-end: toRem(150);
+  }
+
+  // .overview__reviews
+  &__reviews {
+    //margin-block-end: toRem(150);
+  }
+
 }
+
 
 //========================================================================================================================================================
 .hero-overview {
@@ -195,14 +215,7 @@
   }
 
   // .description__item
-  &__item {
-    @media (max-width: toEm(636)) {
-      &:nth-child(3) {
-        inline-size: 100%;
-        text-align: center;
-      }
-    }
-  }
+  &__item {}
 }
 
 //========================================================================================================================================================
@@ -225,7 +238,7 @@
       background-position: center left;
       inline-size: percent(825, 1280);
       block-size: 100%;
-      overflow: hidden;
+      //overflow: hidden;
       border-radius: 0 toRem(10) toRem(10) 0;
 
       @media (max-width:$mobile) {
@@ -237,6 +250,12 @@
         background-image: url('../img/more/image_for_calendar_428.jpg');
         inline-size: percent(304, 404);
       }
+
+      @media (max-width: toEm(320)) {
+        background-image: url('../img/more/image_for_calendar.jpg');
+        inline-size: 100%;
+      }
+
     }
   }
 
@@ -281,4 +300,53 @@
     aspect-ratio: 560 / 456;
     border-radius: toRem(10);
   }
+}
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+.additional {
+
+
+  // .additional__container
+  &__container {}
+
+  // .additional__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(90);
+    }
+  }
+
+  // .additional__body
+  &__body {
+    padding-inline-start: toRem(18);
+  }
+
+  // .additional__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(40);
+    row-gap: toRem(57);
+
+    @media (max-width: toEm(1060)) {
+      justify-content: center;
+    }
+
+    @media (max-width:$mobileSmall) {
+      justify-content: space-around;
+    }
+  }
+
+  // .additional__item
+  &__item {
+    inline-size: auto;
+    min-inline-size: toRem(160);
+  }
+
+  // .additional__link
+  &__link {}
 }

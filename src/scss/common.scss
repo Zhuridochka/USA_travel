@@ -560,16 +560,16 @@
 
 //=== Item-tag-price
 .item-tag-price {
-  inline-size: toRem(160);
+  min-inline-size: toRem(160);
+  inline-size: auto;
   block-size: toRem(100);
   position: relative;
   border-radius: toRem(10);
   background: rgba(255, 255, 255, 0.20);
   box-shadow: 0 0 toRem(15) 0 rgba(0, 0, 0, 0.10);
-  padding-block: toRem(24);
-  padding-inline: toRem(13);
-
   z-index: 1; // *можна прибрати
+  display: flex;
+
 
   &::before {
     content: '';
@@ -598,7 +598,13 @@
   }
 
   // .item-tag-price__body
-  &__body {}
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: toRem(24);
+    padding-inline: toRem(13);
+  }
 
   // .item-tag-price__cost
   &__cost {
@@ -629,6 +635,7 @@
     font-size: toRem(14);
     font-weight: 500;
   }
+
 }
 
 //=== Stars-raiting
