@@ -10,6 +10,11 @@
   &__description {
     margin-block-end: toRem(150);
   }
+
+  // .overview__calendar  
+  &__calendar {
+    margin-block-end: toRem(150);
+  }
 }
 
 //========================================================================================================================================================
@@ -197,5 +202,83 @@
         text-align: center;
       }
     }
+  }
+}
+
+//========================================================================================================================================================
+.calendar {
+  @include gridContainer(4);
+
+  // .calendar__content
+  &__content {
+    display: flex;
+    justify-content: end;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-block-start: toRem(0);
+      inset-inline-start: toRem(0);
+      background-image: url('../img/more/image_for_calendar.jpg');
+      background-repeat: no-repeat;
+      background-position: center left;
+      inline-size: percent(825, 1280);
+      block-size: 100%;
+      overflow: hidden;
+      border-radius: 0 toRem(10) toRem(10) 0;
+
+      @media (max-width:$tablet) {
+        background-image: url('../img/more/image_for_calendar_768.jpg');
+        inline-size: percent(479, 689);
+      }
+
+      @media (max-width: toEm(630)) {
+        background-image: url('../img/more/image_for_calendar_428.jpg');
+        inline-size: percent(304, 404);
+      }
+    }
+  }
+
+  // .calendar__body
+  &__body {
+    position: relative;
+    z-index: 2;
+    inline-size: toRem(560);
+    flex: 0 1 toRem(560);
+    justify-self: end;
+    padding-block-start: toRem(151);
+    padding-block-end: toRem(151);
+    padding-inline-start: toRem(15);
+    border-radius: toRem(10);
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: toRem(90);
+
+    @media (max-width:$mobile) {
+      padding-block-start: toRem(142);
+      padding-block-end: toRem(163);
+    }
+
+    @media (max-width: toEm(428)) {
+      padding-block-start: toRem(151);
+      padding-block-end: toRem(147);
+    }
+  }
+
+  // .calendar__title
+  &__title {
+    background-color: $whiteColor;
+
+    @media (max-width: toEm(428)) {
+      align-self: center;
+    }
+  }
+
+  // .calendar__image
+  &__image {
+    aspect-ratio: 560 / 456;
+    border-radius: toRem(10);
   }
 }

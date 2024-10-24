@@ -5,7 +5,7 @@
 })
 
 <body>
-  <div class="wrapper">
+  < class="wrapper">
     @@include('html/_header.htm',{})
     <main class="overview">
       <section class="overview__hero hero-overview">
@@ -67,10 +67,19 @@
           </div>
         </div>
       </section>
+
+      <section class="overview__calendar calendar">
+        <div class="calendar__content">
+          <div class="calendar__body">
+            <h2 class="calendar__title title">Travel calendar</h2>
+            <img class="calendar__image ibg" src="@img/more/planning-calendar(2).jpg" alt="Image planning-calenda">
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/_footer.htm',{})
-  </div>
-  @@include('html/_js.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
 </body>
 
 </html>
