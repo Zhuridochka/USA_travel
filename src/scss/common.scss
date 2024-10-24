@@ -296,6 +296,19 @@
     color: #D4D4D4;
   }
 
+  &--trnsp {
+    inline-size: toRem(50);
+    flex-basis: toRem(50);
+    background-color: rgba(237, 237, 237, 0.3);
+    border: none;
+
+    &::before {
+      position: relative;
+      z-index: 2;
+      color: $grayColor;
+    }
+  }
+
   @media (any-hover: hover) {
     &:hover {
       background-color: $whiteColor;
@@ -538,6 +551,7 @@
       inline-size: 100%;
       text-align: center;
     }
+
   }
 
   // .actions-item-tour__like
@@ -553,7 +567,8 @@
   background: rgba(255, 255, 255, 0.20);
   box-shadow: 0 0 toRem(15) 0 rgba(0, 0, 0, 0.10);
   padding-block: toRem(24);
-  padding-inline: toRem(18);
+  padding-inline: toRem(13);
+
   z-index: 1; // *можна прибрати
 
   &::before {
@@ -591,9 +606,8 @@
     column-gap: toRem(10);
     color: $blueColor;
     font-size: toRem(24);
-    line-height: 1.208333;
-    /* 29/24 */
     font-weight: 700;
+    text-align: center;
 
     &::before {
       inline-size: toRem(30);

@@ -1,0 +1,201 @@
+//========================================================================================================================================================
+.overview {
+
+  // .overview__hero
+  &__hero {
+    margin-block-end: toRem(150);
+  }
+
+  // .overview__description  
+  &__description {
+    margin-block-end: toRem(150);
+  }
+}
+
+//========================================================================================================================================================
+.hero-overview {
+  position: relative;
+
+  // .hero-overview__image-bg
+  &__image-bg {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
+      backdrop-filter: blur(0.5px);
+      filter: blur(0.5px);
+    }
+  }
+
+  // .hero-overview__image
+  &__image {
+    aspect-ratio: 1440 / 670;
+
+    @media (max-width:$mobile) {
+      aspect-ratio: 768 / 1024;
+    }
+
+    @media (max-width: toEm(428)) {
+      aspect-ratio: 428 / 926;
+    }
+  }
+
+  // .hero-overview__container
+  &__container {
+    padding-block-start: toRem(212);
+    padding-block-end: toRem(212);
+    display: flex;
+
+    @media (max-width:$mobile) {
+      padding-block-start: toRem(388);
+      padding-block-end: toRem(389);
+    }
+
+    @media (max-width: toEm(428)) {
+      padding-block-start: toRem(322);
+      padding-block-end: toRem(323);
+    }
+  }
+
+  // .hero-overview__content  
+  &__content {
+    flex: 0 1 toRem(761);
+    position: relative;
+    z-index: 2;
+  }
+
+  // .hero-overview__subtitle
+  &__subtitle {
+    font-size: toRem(24);
+    font-weight: 700;
+    line-height: 1.208333;
+    /* 29/24 */
+    color: $yellowColor;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(10);
+    }
+  }
+
+  // .hero-overview__title
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $whiteColor;
+    @include adaptiveValue("font-size", 48, 32);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .hero-overview__actions
+  &__actions {}
+}
+
+//========================================================================================================================================================
+.description {
+
+  // .description__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(50);
+    row-gap: toRem(77);
+
+    @media (max-width:$mobile) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width:$mobile) {
+      justify-content: space-around;
+    }
+  }
+
+  // .description__content
+  &__content {
+    inline-size: toRem(385);
+    flex: 0 1 toRem(385);
+
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+      flex: 0 1 100%;
+      align-self: flex-start;
+    }
+  }
+
+  // .description__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+    }
+  }
+
+  // .description__text
+  &__text {
+    font-weight: 500;
+    line-height: 1.214286;
+    /* 17/14 */
+  }
+
+  // .description__data
+  &__data {
+    inline-size: toRem(645);
+    flex: 0 1 toRem(645);
+
+    @media (max-width:$mobile) {
+      padding-inline-start: toRem(20);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-inline-start: toRem(18);
+    }
+  }
+
+  // .description__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(35);
+    row-gap: toRem(55);
+
+    @media (max-width:$tablet) {
+      justify-content: center;
+    }
+
+    @media (max-width:$mobile) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: toEm(636)) {
+      justify-content: space-around;
+    }
+
+    @media (max-width:$mobileSmall) {
+      justify-content: center;
+    }
+  }
+
+  // .description__item
+  &__item {
+    @media (max-width: toEm(636)) {
+      &:nth-child(3) {
+        inline-size: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

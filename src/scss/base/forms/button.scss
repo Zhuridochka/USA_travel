@@ -21,8 +21,10 @@
 		inline-size: toRem(20);
 		flex-basis: toRem(20);
 		font-size: toRem(15);
+		margin-block-start: toRem(2);
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		transition: all 0.4s;
 	}
 
@@ -48,6 +50,15 @@
 			inline-size: 100%;
 			padding-inline: toRem(5);
 			margin: 35px auto 0 auto;
+		}
+	}
+
+	&--ov {
+		padding-block: toRem(16);
+		max-inline-size: toRem(290);
+
+		@media (max-width:$mobileSmall) {
+			inline-size: 100%;
 		}
 	}
 

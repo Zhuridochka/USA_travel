@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('html/_head.htm',{
+"title":"OverviewPage"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="overview">
+      <section class="overview__hero hero-overview">
+        <div class="hero-overview__image-bg">
+          <picture>
+            <source media="(max-width: 767.98px)" srcset="img/more/image_bg_768.jpg">
+            <source media="(max-width: 427.98px)" srcset="img/more/image_bg_428.jpg">
+            <img class="hero-overview__image ibg" src="@img/more/image_bg.jpg" alt="Image">
+          </picture>
+        </div>
+        <div class="hero-overview__container">
+          <div class="hero-overview__content">
+            <div class="hero-overview__subtitle">Bus tour</div>
+            <h1 class="hero-overview__title">Important places of the USA</h1>
+            <div class="hero-overview__actions actions-item-tour">
+              <a href="#" class="actions-item-tour__button button button--ov _icon-arrow">To other excursions</a>
+              <a href="#" class="actions-item-tour__like like like--trnsp _icon-heart"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview__description description">
+        <div class="description__container">
+          <div class="description__content">
+            <h2 class="description__title title">Description of the excursion</h2>
+            <div class="description__text">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo saepe repellendus soluta explicabo sunt fuga culpa nihil expedita modi aliquam autem, dolorum quis perferendis tempora placeat dolorem. Deserunt, consectetur. Impedit.
+              </p>
+            </div>
+          </div>
+          <div class="description__data">
+            <ul class="description__items">
+              <li class="description__item">
+                <a href="#" class="item-tag-price">
+                  <div class="item-tag-price__body">
+                    <div class="item-tag-price__cost _icon-coins">1618 $</div>
+                    <div class="item-tag-price__ticket">Adult ticket</div>
+                  </div>
+                </a>
+              </li>
+              <li class="description__item">
+                <a href="#" class="item-tag-price">
+                  <div class="item-tag-price__body">
+                    <div class="item-tag-price__cost _icon-coins">1412 $</div>
+                    <div class="item-tag-price__ticket">Child ticket</div>
+                  </div>
+                </a>
+              </li>
+              <li class="description__item">
+                <a href="#" class="item-tag-price">
+                  <div class="item-tag-price__body">
+                    <div class="item-tag-price__cost _icon-time">15 hours</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
